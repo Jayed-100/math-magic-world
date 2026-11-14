@@ -98,6 +98,7 @@ body{background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3));bac
 #splash .ld i{width:14px;height:14px;border-radius:50%;background:#fff;animation:dot .9s ease-in-out infinite}
 #splash .ld i:nth-child(2){animation-delay:.15s}#splash .ld i:nth-child(3){animation-delay:.3s}
 @keyframes dot{50%{transform:translateY(-12px);background:#ffe066}}
+.mi{background:rgba(255,90,106,.12);border-left:8px solid #ff4d5e;border-radius:16px;padding:10px 12px;margin:10px 0;text-align:left;font-size:19px;font-weight:500}.mi .small{display:block;margin-top:6px;font-size:16px;line-height:1.45}.fb{max-height:85vh;overflow:auto}
 </style></head><body>
 <div id="bg"></div><div id="app"></div><div id="splash"><div class="sp-in"></div></div>
 <script>
@@ -107,7 +108,7 @@ add:'Addition Adventure',addD:'Collect treats and add them up!',sub_:'Subtractio
 stars:'Stars',coins:'Coins',level:'Level',daily:'Daily Challenge',dailyD:'10 mixed questions!',learn:'Learn',progress:'My Progress',settings:'Settings',
 easy:'Easy',medium:'Medium',hard:'Hard',pick:'Pick a level',unlock:'Earn 2 stars on the level before to unlock',what:'WHAT IS THE ANSWER?',q:'Question',score:'Score',next:'Next ➜',
 good:['WOW! Amazing!','You’re a Math Superstar!','Fantastic! Keep going!','Brilliant! High five!'],try:['Good try! Let’s try another one!','Almost there! You can do it!','Nice effort! You’re learning!'],
-ans:'The right answer is',oops:'Oops, not quite!',tried:'But you tried — Mashallah! 🌟',home:'Home',again:'Play again',done:'Level complete!',sound:'Sound effects',music:'Background music (coming soon)',motion:'Gentle animations',lang:'Language',reset:'Reset progress',sure:'Tap again to confirm',about:'About',
+ans:'The right answer is',oops:'Oops, not quite!',mist:'My Mistakes',youSaid:'You chose',noMist:'No mistakes yet — great job!',learnFrom:'Let’s learn from these',tried:'But you tried — Mashallah! 🌟',home:'Home',again:'Play again',done:'Level complete!',sound:'Sound effects',music:'Background music (coming soon)',motion:'Gentle animations',lang:'Language',reset:'Reset progress',sure:'Tap again to confirm',about:'About',
 aboutT:'Math Magic World teaches addition, subtraction, multiplication and division for ages 7–8. Everything stays on this device. No ads, no accounts, no links.',
 acc:'Accuracy',best:'Best subject',badges:'Badges',total:'Questions',right:'Correct',wrong:'Oops',streak:'Day streak',parent:'Parent summary',another:'Show another',
 learnT:'Learn with pictures',dailyDone:'Done today! Come back tomorrow ✨',parentTxt:(a,c,b)=>`Your child answered ${a} questions with ${c} correct.${b?' Strongest topic: '+b+'.':''} All data is stored only on this device.`,
@@ -119,7 +120,7 @@ add:'যোগের অভিযান',addD:'মজার জিনিস জ�
 stars:'তারা',coins:'কয়েন',level:'লেভেল',daily:'আজকের চ্যালেঞ্জ',dailyD:'১০টি মিশ্র প্রশ্ন!',learn:'শেখো',progress:'আমার অগ্রগতি',settings:'সেটিংস',
 easy:'সহজ',medium:'মাঝারি',hard:'কঠিন',pick:'লেভেল বেছে নাও',unlock:'আগের লেভেলে ২টি তারা পেলে খুলে যাবে',what:'উত্তর কী?',q:'প্রশ্ন',score:'স্কোর',next:'পরের ➜',
 good:['ওয়াও! দারুণ!','তুমি গণিতের সুপারস্টার!','চমৎকার! এগিয়ে চলো!','অসাধারণ! হাই ফাইভ!'],try:['ভালো চেষ্টা! আরেকটা চেষ্টা করি!','প্রায় হয়ে গেছে! তুমি পারবে!','সুন্দর চেষ্টা! তুমি শিখছো!'],
-ans:'সঠিক উত্তর হলো',oops:'ভুল হয়েছে!',tried:'কিন্তু তুমি চেষ্টা করেছ, মাশাআল্লাহ! 🌟',home:'হোম',again:'আবার খেলো',done:'লেভেল শেষ!',sound:'শব্দ',music:'ব্যাকগ্রাউন্ড মিউজিক (শীঘ্রই আসছে)',motion:'নরম অ্যানিমেশন',lang:'ভাষা',reset:'অগ্রগতি মুছে ফেলো',sure:'নিশ্চিত করতে আবার চাপো',about:'অ্যাপ সম্পর্কে',
+ans:'সঠিক উত্তর হলো',oops:'ভুল হয়েছে!',mist:'আমার ভুলগুলো',youSaid:'তুমি বেছেছিলে',noMist:'এখনো কোনো ভুল নেই — দারুণ!',learnFrom:'এগুলো থেকে শিখি',tried:'কিন্তু তুমি চেষ্টা করেছ, মাশাআল্লাহ! 🌟',home:'হোম',again:'আবার খেলো',done:'লেভেল শেষ!',sound:'শব্দ',music:'ব্যাকগ্রাউন্ড মিউজিক (শীঘ্রই আসছে)',motion:'নরম অ্যানিমেশন',lang:'ভাষা',reset:'অগ্রগতি মুছে ফেলো',sure:'নিশ্চিত করতে আবার চাপো',about:'অ্যাপ সম্পর্কে',
 aboutT:'ম্যাথ ম্যাজিক ওয়ার্ল্ড ৭–৮ বছর বয়সীদের যোগ, বিয়োগ, গুণ ও ভাগ শেখায়। সব তথ্য এই ডিভাইসেই থাকে। কোনো বিজ্ঞাপন, অ্যাকাউন্ট বা লিংক নেই।',
 acc:'সঠিকতা',best:'সেরা বিষয়',badges:'ব্যাজ',total:'প্রশ্ন',right:'সঠিক',wrong:'ভুল',streak:'টানা দিন',parent:'অভিভাবকের সারাংশ',another:'আরেকটি দেখাও',
 learnT:'ছবি দিয়ে শেখো',dailyDone:'আজ শেষ! কাল আবার এসো ✨',parentTxt:(a,c,b)=>`আপনার সন্তান ${a}টি প্রশ্নের মধ্যে ${c}টি সঠিক করেছে।${b?' সবচেয়ে ভালো বিষয়: '+b+'।':''} সব তথ্য শুধু এই ডিভাইসে আছে।`,
@@ -127,7 +128,7 @@ b:{first:'প্রথম জয়',add:'যোগ মাস্টার',sub:'
 vAdd:(a,b)=>`প্রথমে ${a}টি, আরও ${b}টি। সব মিলে কয়টি?`,vSub:(a,b)=>`${a}টি বেলুন ছিল। ${b}টি উড়ে গেল। কয়টি বাকি?`,vMul:(a,b)=>`${a}টি দল, প্রতি দলে ${b}টি। সব মিলে কয়টি?`,vDiv:(a,b)=>`${a}টি চকলেট ${b}জন এলিয়েনকে সমান ভাগ করো। প্রত্যেকে কয়টি পাবে?`,
 st:{add:'প্রথম দল গোনো, তারপর দ্বিতীয় দল গোনো।',sub:'সবগুলো দিয়ে শুরু করো, তারপর কিছু সরিয়ে নাও।',mul:'এক দল গোনো, তারপর প্রতিটি দলের জন্য যোগ করতে থাকো।',div:'যতক্ষণ না শেষ হয়, প্রতিজনকে একটা একটা করে চকলেট দাও।'}}};
 const OPS=['add','sub','mul','div'],SYM={add:'+',sub:'−',mul:'×',div:'÷'},EM={add:'🍎',sub:'🎈',mul:'🌸',div:'🍬'},SCENE={add:'🍎🍬⭐',sub:'🎈🎈💨',mul:'🦁🐵🌴',div:'👽🍬🪐'};
-const DEF={lang:'en',sound:true,calm:false,stars:0,coins:0,st:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]},badges:[],best:{},daily:'',streak:0,last:''};
+const DEF={lang:'en',sound:true,calm:false,stars:0,coins:0,st:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]},badges:[],best:{},daily:'',streak:0,last:'',mist:[]};
 let S;try{S=Object.assign({},DEF,JSON.parse(localStorage.getItem('mmw')||'{}'))}catch(e){S={...DEF}}
 const save=()=>{try{localStorage.setItem('mmw',JSON.stringify(S))}catch(e){}};
 const t=k=>T[S.lang][k],today=()=>new Date().toISOString().slice(0,10);
@@ -160,6 +161,12 @@ const story=q=>t({add:'vAdd',sub:'vSub',mul:'vMul',div:'vDiv'}[q.op])(q.a,q.b);
 function confetti(){if(S.calm)return;const c=['#ff6fa5','#ffd94a','#37c98b','#4aa8ff','#a46bff','#ff9a3d'];for(let i=0;i<46;i++){const s=document.createElement('i');s.className='conf';s.style.cssText=`left:${R(0,100)}vw;background:${pick(c)};--dx:${R(-90,90)}px;animation-delay:${Math.random()*.4}s;border-radius:${pick(['2px','50%'])}`;document.body.appendChild(s);setTimeout(()=>s.remove(),2400)}}
 /* background */
 (function(){const b=$('#bg');for(let i=0;i<16;i++){const x=document.createElement('i');x.textContent=pick(['⭐','✨','🫧','☁️','💫']);x.style.cssText=`left:${R(0,96)}%;font-size:${R(18,40)}px;animation-duration:${R(14,30)}s;animation-delay:-${R(0,30)}s`;b.appendChild(x)}})();
+function expl(q){const{a,b,ans,op}=q,bn=S.lang==='bn',ta=a-a%10,tb=b-b%10,oa=a%10,ob=b%10;
+ if(op==='add')return(a>=10||b>=10)?(bn?`আগে দশক যোগ করি: ${ta} + ${tb} = ${ta+tb}। তারপর একক যোগ: ${oa} + ${ob} = ${oa+ob}। এবার মিলিয়ে নিই: ${ta+tb} + ${oa+ob} = ${ans}।`:`Add the tens first: ${ta} + ${tb} = ${ta+tb}. Then the ones: ${oa} + ${ob} = ${oa+ob}. Put them together: ${ta+tb} + ${oa+ob} = ${ans}.`):(bn?`${a} থেকে শুরু করি, তারপর আরও ${b}টি গুনি: ${a} + ${b} = ${ans}। যোগ মানে একসাথে করা।`:`Start at ${a} and count ${b} more: ${a} + ${b} = ${ans}. Adding means putting together.`);
+ if(op==='sub')return(tb>0&&ob>0)?(bn?`আগে দশক বিয়োগ: ${a} − ${tb} = ${a-tb}। তারপর ${ob} বিয়োগ: ${a-tb} − ${ob} = ${ans}।`:`Take away the tens first: ${a} − ${tb} = ${a-tb}. Then take away ${ob}: ${a-tb} − ${ob} = ${ans}.`):(bn?`${a} থেকে ${b}টি সরিয়ে নিই। পিছনে ${b} ধাপ গুনলে ${ans} পাই: ${a} − ${b} = ${ans}।`:`Start with ${a} and take away ${b}. Counting back ${b} steps leaves ${ans}: ${a} − ${b} = ${ans}.`);
+ if(op==='mul'){const sm=Array(a).fill(b).join(' + ');return bn?`${a}টি দল, প্রতি দলে ${b}টি। বারবার যোগ করি: ${sm} = ${ans}। তাই ${a} × ${b} = ${ans}।`:`${a} groups of ${b}. Add ${b} again and again: ${sm} = ${ans}. So ${a} × ${b} = ${ans}.`}
+ return bn?`${a}টি জিনিস ${b}টি দলে সমান ভাগ করি। প্রতি দলে ${ans}টি, কারণ ${b} × ${ans} = ${a}। তাই ${a} ÷ ${b} = ${ans}।`:`Share ${a} equally into ${b} groups. Each group gets ${ans}, because ${b} × ${ans} = ${a}. So ${a} ÷ ${b} = ${ans}.`}
+const mi=m=>`<div class="mi"><b style="font-size:24px">${m.a} ${SYM[m.op]} ${m.b} = ?</b><br>❌ ${t('youSaid')}: <s>${m.ch}</s> &nbsp; ✅ ${t('ans')}: <b>${m.ans}</b><span class="small">💡 ${expl(m)}</span></div>`;
 /* ui */
 const app=$('#app');let G=null,pending=null,resetArm=false;
 const lvl=()=>1+Math.floor(S.stars/10);
@@ -172,7 +179,7 @@ function home(){G=null;show(`<div class="hero">${mascot()}<h1>Math Magic World</
 <div class="grid">${OPS.map(o=>`<button class="card ${o}" data-a="pick" data-o="${o}"><span class="sym">${SYM[o]}</span><div class="scene">${SCENE[o]}</div><h3>${opName(o)}</h3><p>${t(o+'D')}</p><span class="play">▶ ${t('play')}</span></button>`).join('')}</div>
 <div class="row2"><button class="btn y w" data-a="daily">🎁 ${t('daily')} ${S.daily===today()?'✅':''}</button><button class="btn g" data-a="learn">💡 ${t('learn')}</button><button class="btn" data-a="prog">📊 ${t('progress')}</button><button class="btn w" style="background:linear-gradient(180deg,#8fd0ff,#4aa8ff);box-shadow:0 7px 0 #2a7fd0" data-a="set">⚙️ ${t('settings')}</button></div>`)}
 function pickLvl(o){show(head(opName(o))+`<div class="panel qbox"><div class="scene" style="font-size:64px">${SCENE[o]}</div><h2>${t('pick')}</h2><div class="lv">${['easy','medium','hard'].map((l,i)=>`<button class="btn ${unlocked(l)?['g','y',''][i]:'lock'}" data-a="start" data-o="${o}" data-l="${l}" ${unlocked(l)?'':'data-locked=1'}>${unlocked(l)?'':'🔒 '}${t(l)}<br>${'⭐'.repeat(Math.min(3,S.best[l+o]||0))||'☆'}</button>`).join('')}</div><p class="small">${t('unlock')}</p></div>`)}
-function start(ops,lvls,daily){G={qs:session(ops,lvls),i:0,sc:0,ops,lvls,daily,right:0,ans:false,per:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]}};ask()}
+function start(ops,lvls,daily){G={qs:session(ops,lvls),i:0,sc:0,ops,lvls,daily,right:0,mist:[],ans:false,per:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]}};ask()}
 function ask(){const q=G.qs[G.i];G.ans=false;const pct=G.i/G.qs.length*100;
  show(head(`${t('q')} ${G.i+1}/${G.qs.length}`,'home')+`<div class="bar"><b style="width:${pct}%"></b></div><div class="chips"><span class="chip">${t('score')} ${G.sc}</span><span class="chip">⭐ ${G.right}</span></div>
 <div class="panel qbox"><div class="small" style="font-weight:700">${t('what')}</div><div class="vis">${vis(q)}</div><div class="expr">${q.a} <em>${SYM[q.op]}</em> ${q.b} = ?</div><p class="small">${story(q)}</p>
@@ -180,9 +187,9 @@ function ask(){const q=G.qs[G.i];G.ans=false;const pct=G.i/G.qs.length*100;
 function answer(v,btn){if(G.ans)return;G.ans=true;const q=G.qs[G.i],ok=v===q.ans;
  S.st[q.op][1]++;G.per[q.op][1]++;
  document.querySelectorAll('.opt').forEach(b=>{if(+b.dataset.v===q.ans)b.classList.add('ok');else if(b===btn)b.classList.add('no');b.disabled=true});
- if(ok){S.st[q.op][0]++;G.per[q.op][0]++;G.sc+=10;G.right++;S.coins+=5;SFX.ok();setTimeout(SFX.coin,350);confetti()}else{SFX.no();if(!S.calm){const f=document.createElement('div');f.className='rf';document.body.appendChild(f);setTimeout(()=>f.remove(),1100)}try{navigator.vibrate&&navigator.vibrate([250,100,250])}catch(e){}}
+ if(ok){S.st[q.op][0]++;G.per[q.op][0]++;G.sc+=10;G.right++;S.coins+=5;SFX.ok();setTimeout(SFX.coin,350);confetti()}else{{const m={op:q.op,a:q.a,b:q.b,ans:q.ans,ch:v};G.mist.push(m);S.mist=[m,...S.mist].slice(0,30)}SFX.no();if(!S.calm){const f=document.createElement('div');f.className='rf';document.body.appendChild(f);setTimeout(()=>f.remove(),1100)}try{navigator.vibrate&&navigator.vibrate([250,100,250])}catch(e){}}
  save();const last=G.i===G.qs.length-1;
- $('#fbz').innerHTML=`<div class="fb ${ok?'':'bad'}"><div style="font-size:54px">${ok?'🌟':'❌'}</div><h3>${ok?pick(t('good')):t('oops')}</h3><p>${ok?'+5 🪙':`${t('ans')} <b style="font-size:34px">${q.ans}</b><br>${t('tried')}`}</p><button class="btn y" data-a="nxt" style="width:100%">${t('next')}</button></div>`;
+ $('#fbz').innerHTML=`<div class="fb ${ok?'':'bad'}"><div style="font-size:54px">${ok?'🌟':'❌'}</div><h3>${ok?pick(t('good')):t('oops')}</h3><p>${ok?'+5 🪙':`${t('ans')} <b style="font-size:34px">${q.ans}</b><br><span class="small" style="display:block;margin:8px 0;font-size:17px;line-height:1.45">💡 ${expl(q)}</span>${t('tried')}`}</p><button class="btn y" data-a="nxt" style="width:100%">${t('next')}</button></div>`;
  if(ok)G.timer=setTimeout(()=>{if(G&&G.ans&&G.qs[G.i]===q)nxt()},2200)}
 function nxt(){clearTimeout(G.timer);SFX.click();if(G.i<G.qs.length-1){G.i++;ask()}else finish()}
 function finish(){const n=G.qs.length,r=G.right,st=r>=n-1?3:r>=Math.round(n*.6)?2:r>=3?1:0,lv=G.lvls[0],key=G.daily?'daily':lv+G.ops[0];
@@ -194,7 +201,7 @@ function finish(){const n=G.qs.length,r=G.right,st=r>=n-1?3:r>=Math.round(n*.6)?
  const nu=Object.keys(chk).filter(k=>chk[k]&&!S.badges.includes(k));S.badges.push(...nu);save();SFX.win();confetti();
  show(`<div class="panel qbox"><div style="font-size:70px">🏆</div><h2 style="font-size:32px;margin:0">${t('done')}</h2><div class="stars3">${[1,2,3].map(i=>`<span style="animation-delay:${i*.25}s;${i>st?'filter:grayscale(1);opacity:.3':''}">⭐</span>`).join('')}</div>
 <p style="font-size:22px;font-weight:600">${r}/${n} ✔ &nbsp; +${st*10+(G.daily?30:0)} 🪙</p>${nu.map(k=>`<div class="chip" style="display:inline-block;margin:4px">🎖️ ${T[S.lang].b[k]}</div>`).join('')}
-<div class="row2"><button class="btn g" data-a="again">${t('again')}</button><button class="btn" data-a="home">🏠 ${t('home')}</button></div></div>`);G.over=true}
+${G.mist.length?`<h3 style="text-align:left;margin:14px 0 0">📝 ${t('learnFrom')}</h3>${G.mist.map(mi).join('')}`:''}<div class="row2"><button class="btn g" data-a="again">${t('again')}</button><button class="btn" data-a="home">🏠 ${t('home')}</button></div></div>`);G.over=true}
 function learn(o){o=o||'add';const q=mk(o,'easy');show(head(t('learnT'))+`<div class="chips">${OPS.map(x=>`<button class="chip" data-a="learn" data-o="${x}" style="border:0;font-family:inherit;color:inherit;cursor:pointer;${x===o?'outline:4px solid #a46bff':''}">${SYM[x]}</button>`).join('')}</div>
 <div class="panel qbox"><h2 style="margin:0">${opName(o)}</h2><div class="vis">${vis(q)}</div><div class="expr">${q.a} <em>${SYM[o]}</em> ${q.b} = <em>${q.ans}</em></div>
 <ol class="steps"><li>${story(q)}</li><li>${t('st')[o]}</li><li>${q.a} ${SYM[o]} ${q.b} = <b>${q.ans}</b> 🎉</li></ol><button class="btn y w" data-a="learn" data-o="${o}" style="width:100%">🔄 ${t('another')}</button></div>`)}
@@ -205,6 +212,7 @@ function prog(){const A=OPS.reduce((s,o)=>s+S.st[o][1],0),C=OPS.reduce((s,o)=>s+
 ${bs?`<div class="sr"><span>${t('best')}</span><b>${SYM[bs]} ${opName(bs)}</b></div>`:''}
 ${OPS.map(o=>{const p=S.st[o][1]?Math.round(S.st[o][0]/S.st[o][1]*100):0;return `<div class="sr"><span>${SYM[o]} ${opName(o).split(' ')[0]}</span><div class="bar"><b style="width:${p}%"></b></div><span style="width:44px">${p}%</span></div>`}).join('')}</div>
 <div class="panel"><h3 style="margin:0 0 10px">🎖️ ${t('badges')}</h3><div class="bgrid">${Object.keys(T.en.b).map((k,i)=>`<div class="badge ${S.badges.includes(k)?'':'off'}"><i>${['🥇','🍎','🎈','🦁','👽','🔟','💯'][i]}</i>${t('b')[k]}</div>`).join('')}</div></div>
+<div class="panel"><h3 style="margin:0 0 6px">📝 ${t('mist')}</h3>${S.mist.length?S.mist.slice(0,10).map(mi).join(''):`<p style="font-weight:600;margin:0">${t('noMist')}</p>`}</div>
 <div class="panel"><h3 style="margin:0 0 6px">👨‍👩‍👧 ${t('parent')}</h3><p style="margin:0;font-weight:500;font-size:17px">${t('parentTxt')(A,C,bs?opName(bs):'')}</p></div>`)}
 function sett(){show(head(t('settings'))+`<div class="panel"><div class="tog">${t('sound')}<button class="sw ${S.sound?'on':''}" data-a="tsnd"></button></div><div class="tog"><span style="font-size:17px;opacity:.7">${t('music')}</span><button class="sw" disabled style="opacity:.4"></button></div><div class="tog">${t('motion')}<button class="sw ${S.calm?'':'on'}" data-a="tcalm"></button></div>
 <div class="tog">${t('lang')}<button class="btn" data-a="lang" style="padding:8px 18px;font-size:18px">${S.lang==='en'?'বাংলা':'English'}</button></div>
@@ -222,7 +230,7 @@ document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!
  else if(a==='snd'||a==='tsnd'){S.sound=!S.sound;save();if(a==='tsnd')sett();else el.textContent=S.sound?'🔊':'🔇'}
  else if(a==='tcalm'){S.calm=!S.calm;save();sett()}
  else if(a==='lang'){S.lang=S.lang==='en'?'bn':'en';document.documentElement.lang=S.lang;save();sett()}
- else if(a==='reset'){if(resetArm){S={...DEF,lang:S.lang,sound:S.sound,calm:S.calm,st:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]},badges:[],best:{}};save();resetArm=false;home()}else{resetArm=true;sett()}}});
+ else if(a==='reset'){if(resetArm){S={...DEF,lang:S.lang,sound:S.sound,calm:S.calm,st:{add:[0,0],sub:[0,0],mul:[0,0],div:[0,0]},badges:[],best:{},mist:[]};save();resetArm=false;home()}else{resetArm=true;sett()}}});
 document.documentElement.lang=S.lang;home();
 
 (function(){const sp=$('#splash'),box=sp.firstChild,name='Math Magic World';
