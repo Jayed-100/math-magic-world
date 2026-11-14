@@ -88,7 +88,7 @@ body{background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3));bac
 #splash.hide{opacity:0;transform:scale(1.08);pointer-events:none}
 #splash .mascot{width:min(52vw,230px);height:auto;animation:spin-in 1s cubic-bezier(.2,1.4,.4,1) both,bob 2s ease-in-out 1s infinite}
 @keyframes spin-in{from{transform:scale(0) rotate(-300deg)}to{transform:scale(1) rotate(0)}}
-#splash h1{margin:14px 0 0;font-size:clamp(34px,10vw,52px);line-height:1;text-shadow:0 4px 0 rgba(90,56,196,.35);display:flex;flex-wrap:wrap;justify-content:center;gap:0 4px}
+#splash h1{margin:14px 0 0;font-size:clamp(28px,8.6vw,48px);line-height:1.1;text-shadow:0 4px 0 rgba(90,56,196,.35);display:flex;flex-wrap:wrap;justify-content:center;gap:0 .3em;padding:0 8px}#splash h1 .w{display:inline-flex;white-space:nowrap}
 #splash h1 span{display:inline-block;animation:letter .6s cubic-bezier(.2,1.6,.4,1) backwards}
 @keyframes letter{from{opacity:0;transform:translateY(40px) scale(.3)}}
 #splash p{margin:8px 0 0;font-weight:600;font-size:18px;text-shadow:0 2px 0 rgba(90,56,196,.3);animation:letter .6s 1.5s backwards}
@@ -226,7 +226,7 @@ document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!
 document.documentElement.lang=S.lang;home();
 
 (function(){const sp=$('#splash'),box=sp.firstChild,name='Math Magic World';
-box.innerHTML=mascot()+'<h1>'+[...name].map((c,i)=>c===' '?'<span style="width:10px"></span>':`<span style="animation-delay:${.9+i*.06}s">${c}</span>`).join('')+'</h1><p>'+t('tag')+'</p><div class="ld"><i></i><i></i><i></i></div>';
+box.innerHTML=mascot()+'<h1>'+(()=>{let n=0;return name.split(' ').map(w=>'<b class="w">'+[...w].map(c=>`<span style="animation-delay:${.9+(n++)*.06}s">${c}</span>`).join('')+'</b>').join('')})()+'</h1><p>'+t('tag')+'</p><div class="ld"><i></i><i></i><i></i></div>';
 ['✨','⭐','💫','✨','⭐','💫'].forEach((e,i)=>{const x=document.createElement('span');x.className='sp';x.textContent=e;x.style.cssText=`left:${[8,82,14,76,45,50][i]}%;top:${[12,16,76,80,6,90][i]}%;animation-delay:${i*.25}s`;sp.appendChild(x)});
 let gone=false;const bye=()=>{if(gone)return;gone=true;sp.classList.add('hide');setTimeout(()=>sp.remove(),700)};
 sp.addEventListener('click',bye);setTimeout(bye,S.calm?900:2800)})();
