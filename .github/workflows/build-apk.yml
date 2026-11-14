@@ -28,6 +28,13 @@ jobs:
           npx cap init "Math Magic World" com.mathmagicworld.app --web-dir=www
           npx cap add android
           npx cap sync android
+      - name: Set app icon and vibration
+        run: |
+          mkdir assets
+          cp icon-only.png icon-foreground.png icon-background.png assets/
+          npm install @capacitor/assets
+          npx capacitor-assets generate --android
+          sed -i 's|<application|<uses-permission android:name="android.permission.VIBRATE" />\n    <application|' android/app/src/main/AndroidManifest.xml
       - name: Build APK
         working-directory: android
         run: |
