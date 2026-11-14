@@ -60,7 +60,9 @@ body{background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3));bac
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
 .opt{border:0;border-radius:26px;min-height:92px;font-size:42px;font-weight:700;font-family:inherit;color:#33285f;cursor:pointer;box-shadow:0 8px 0 rgba(0,0,0,.14);transition:transform .1s}
 .opt:nth-child(1){background:#ffc6dc}.opt:nth-child(2){background:#bdeaff}.opt:nth-child(3){background:#c5f5da}.opt:nth-child(4){background:#ffe3ad}
-.opt.ok{animation:pop .5s;background:#5fe3a2!important;color:#fff}.opt.no{animation:wob .5s;background:#e6dcff!important;opacity:.7}
+.opt.ok{animation:pop .5s;background:#5fe3a2!important;color:#fff}.opt.no{animation:wob .5s;background:#ff5a6a!important;color:#fff;opacity:1}.opt.no::after{content:' ✖'}
+.fb.bad{border-top:10px solid #ff4d5e}.fb.bad h3{color:#e0243a}
+.rf{position:fixed;inset:0;z-index:8;pointer-events:none;box-shadow:inset 0 0 0 10px #ff4d5e,inset 0 0 90px #ff4d5eaa;animation:rf 1s forwards}@keyframes rf{to{opacity:0}}
 @keyframes pop{50%{transform:scale(1.15) rotate(-3deg)}}@keyframes wob{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 .fb{position:fixed;inset:auto 0 0 0;z-index:5;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));background:var(--card);border-radius:34px 34px 0 0;box-shadow:0 -10px 40px rgba(80,60,160,.3);text-align:center;animation:up .4s cubic-bezier(.2,1.3,.4,1);max-width:760px;margin:0 auto}
 @keyframes up{from{transform:translateY(100%)}}
@@ -105,7 +107,7 @@ add:'Addition Adventure',addD:'Collect treats and add them up!',sub_:'Subtractio
 stars:'Stars',coins:'Coins',level:'Level',daily:'Daily Challenge',dailyD:'10 mixed questions!',learn:'Learn',progress:'My Progress',settings:'Settings',
 easy:'Easy',medium:'Medium',hard:'Hard',pick:'Pick a level',unlock:'Earn 2 stars on the level before to unlock',what:'WHAT IS THE ANSWER?',q:'Question',score:'Score',next:'Next ➜',
 good:['WOW! Amazing!','You’re a Math Superstar!','Fantastic! Keep going!','Brilliant! High five!'],try:['Good try! Let’s try another one!','Almost there! You can do it!','Nice effort! You’re learning!'],
-ans:'The answer is',home:'Home',again:'Play again',done:'Level complete!',sound:'Sound effects',music:'Background music (coming soon)',motion:'Gentle animations',lang:'Language',reset:'Reset progress',sure:'Tap again to confirm',about:'About',
+ans:'The right answer is',oops:'Oops, not quite!',tried:'But you tried — Mashallah! 🌟',home:'Home',again:'Play again',done:'Level complete!',sound:'Sound effects',music:'Background music (coming soon)',motion:'Gentle animations',lang:'Language',reset:'Reset progress',sure:'Tap again to confirm',about:'About',
 aboutT:'Math Magic World teaches addition, subtraction, multiplication and division for ages 7–8. Everything stays on this device. No ads, no accounts, no links.',
 acc:'Accuracy',best:'Best subject',badges:'Badges',total:'Questions',right:'Correct',wrong:'Oops',streak:'Day streak',parent:'Parent summary',another:'Show another',
 learnT:'Learn with pictures',dailyDone:'Done today! Come back tomorrow ✨',parentTxt:(a,c,b)=>`Your child answered ${a} questions with ${c} correct.${b?' Strongest topic: '+b+'.':''} All data is stored only on this device.`,
@@ -117,7 +119,7 @@ add:'যোগের অভিযান',addD:'মজার জিনিস জ�
 stars:'তারা',coins:'কয়েন',level:'লেভেল',daily:'আজকের চ্যালেঞ্জ',dailyD:'১০টি মিশ্র প্রশ্ন!',learn:'শেখো',progress:'আমার অগ্রগতি',settings:'সেটিংস',
 easy:'সহজ',medium:'মাঝারি',hard:'কঠিন',pick:'লেভেল বেছে নাও',unlock:'আগের লেভেলে ২টি তারা পেলে খুলে যাবে',what:'উত্তর কী?',q:'প্রশ্ন',score:'স্কোর',next:'পরের ➜',
 good:['ওয়াও! দারুণ!','তুমি গণিতের সুপারস্টার!','চমৎকার! এগিয়ে চলো!','অসাধারণ! হাই ফাইভ!'],try:['ভালো চেষ্টা! আরেকটা চেষ্টা করি!','প্রায় হয়ে গেছে! তুমি পারবে!','সুন্দর চেষ্টা! তুমি শিখছো!'],
-ans:'উত্তর হলো',home:'হোম',again:'আবার খেলো',done:'লেভেল শেষ!',sound:'শব্দ',music:'ব্যাকগ্রাউন্ড মিউজিক (শীঘ্রই আসছে)',motion:'নরম অ্যানিমেশন',lang:'ভাষা',reset:'অগ্রগতি মুছে ফেলো',sure:'নিশ্চিত করতে আবার চাপো',about:'অ্যাপ সম্পর্কে',
+ans:'সঠিক উত্তর হলো',oops:'ভুল হয়েছে!',tried:'কিন্তু তুমি চেষ্টা করেছ, মাশাআল্লাহ! 🌟',home:'হোম',again:'আবার খেলো',done:'লেভেল শেষ!',sound:'শব্দ',music:'ব্যাকগ্রাউন্ড মিউজিক (শীঘ্রই আসছে)',motion:'নরম অ্যানিমেশন',lang:'ভাষা',reset:'অগ্রগতি মুছে ফেলো',sure:'নিশ্চিত করতে আবার চাপো',about:'অ্যাপ সম্পর্কে',
 aboutT:'ম্যাথ ম্যাজিক ওয়ার্ল্ড ৭–৮ বছর বয়সীদের যোগ, বিয়োগ, গুণ ও ভাগ শেখায়। সব তথ্য এই ডিভাইসেই থাকে। কোনো বিজ্ঞাপন, অ্যাকাউন্ট বা লিংক নেই।',
 acc:'সঠিকতা',best:'সেরা বিষয়',badges:'ব্যাজ',total:'প্রশ্ন',right:'সঠিক',wrong:'ভুল',streak:'টানা দিন',parent:'অভিভাবকের সারাংশ',another:'আরেকটি দেখাও',
 learnT:'ছবি দিয়ে শেখো',dailyDone:'আজ শেষ! কাল আবার এসো ✨',parentTxt:(a,c,b)=>`আপনার সন্তান ${a}টি প্রশ্নের মধ্যে ${c}টি সঠিক করেছে।${b?' সবচেয়ে ভালো বিষয়: '+b+'।':''} সব তথ্য শুধু এই ডিভাইসে আছে।`,
@@ -178,9 +180,9 @@ function ask(){const q=G.qs[G.i];G.ans=false;const pct=G.i/G.qs.length*100;
 function answer(v,btn){if(G.ans)return;G.ans=true;const q=G.qs[G.i],ok=v===q.ans;
  S.st[q.op][1]++;G.per[q.op][1]++;
  document.querySelectorAll('.opt').forEach(b=>{if(+b.dataset.v===q.ans)b.classList.add('ok');else if(b===btn)b.classList.add('no');b.disabled=true});
- if(ok){S.st[q.op][0]++;G.per[q.op][0]++;G.sc+=10;G.right++;S.coins+=5;SFX.ok();setTimeout(SFX.coin,350);confetti()}else SFX.no();
+ if(ok){S.st[q.op][0]++;G.per[q.op][0]++;G.sc+=10;G.right++;S.coins+=5;SFX.ok();setTimeout(SFX.coin,350);confetti()}else{SFX.no();if(!S.calm){const f=document.createElement('div');f.className='rf';document.body.appendChild(f);setTimeout(()=>f.remove(),1100)}try{navigator.vibrate&&navigator.vibrate([250,100,250])}catch(e){}}
  save();const last=G.i===G.qs.length-1;
- $('#fbz').innerHTML=`<div class="fb"><div style="font-size:54px">${ok?'🌟':'🤗'}</div><h3>${ok?pick(t('good')):pick(t('try'))}</h3><p>${ok?'+5 🪙':`${t('ans')} <b>${q.ans}</b>`}</p><button class="btn y" data-a="nxt" style="width:100%">${t('next')}</button></div>`;
+ $('#fbz').innerHTML=`<div class="fb ${ok?'':'bad'}"><div style="font-size:54px">${ok?'🌟':'❌'}</div><h3>${ok?pick(t('good')):t('oops')}</h3><p>${ok?'+5 🪙':`${t('ans')} <b style="font-size:34px">${q.ans}</b><br>${t('tried')}`}</p><button class="btn y" data-a="nxt" style="width:100%">${t('next')}</button></div>`;
  if(ok)G.timer=setTimeout(()=>{if(G&&G.ans&&G.qs[G.i]===q)nxt()},2200)}
 function nxt(){clearTimeout(G.timer);SFX.click();if(G.i<G.qs.length-1){G.i++;ask()}else finish()}
 function finish(){const n=G.qs.length,r=G.right,st=r>=n-1?3:r>=Math.round(n*.6)?2:r>=3?1:0,lv=G.lvls[0],key=G.daily?'daily':lv+G.ops[0];
