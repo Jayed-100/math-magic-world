@@ -28,13 +28,14 @@ jobs:
           npx cap init "Math Magic World" com.mathmagicworld.app --web-dir=www
           npx cap add android
           npx cap sync android
-      - name: Set app icon and vibration
+      - name: Set icon, splash and vibration
         run: |
           mkdir assets
-          cp icon-only.png icon-foreground.png icon-background.png assets/
+          cp icon-only.png icon-foreground.png icon-background.png splash.png splash-dark.png assets/
           npm install @capacitor/assets
           npx capacitor-assets generate --android
           sed -i 's|<application|<uses-permission android:name="android.permission.VIBRATE" />\n    <application|' android/app/src/main/AndroidManifest.xml
+          sed -i 's|<item name="android:background">@drawable/splash</item>|&<item name="windowSplashScreenBackground">#b4b0ff</item><item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>|' android/app/src/main/res/values/styles.xml
       - name: Build APK
         working-directory: android
         run: |
